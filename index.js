@@ -249,6 +249,12 @@ app.post('/buyerLogin',(req,res)=>{
     })
 })
 
+//Temp Checking for Wokring
+app.get('/temp',(req,res)=> 
+{
+    return res.status(200).json({"msg":"Working fine"});
+})
+
 app.post('/buyerAutoLogin',(req,res)=>{
     buyers.findOne({
         Email:req.body.Email,
@@ -385,6 +391,6 @@ app.post('/insertcropname',(req,res)=>{
     })
 })
 
-app.listen(80, ()=>{
-    console.log("Server Started");
+app.listen(4000, ()=>{
+    console.log("Server Started "+4000);
 })
